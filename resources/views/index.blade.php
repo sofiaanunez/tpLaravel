@@ -11,6 +11,8 @@
 
   <body>
 
+    @include('plantillaIndex.headerIndex')
+
     <section class="hero">
       <div class="opacidad" style=""> </div>
   		<div class="background-image" style=""> </div>
@@ -155,6 +157,8 @@
       </section>
 
         <div class="divisor"></div>
+
+        @include('plantillaIndex.footerIndex')
 
   </body>
 </html>

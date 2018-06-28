@@ -11,6 +11,13 @@
 |
 */
 
-Route::get('/', function () {
-    return view ('index');
-});
+Route::get('/', 'HomeController@index');
+
+Route::get('/index', 'controladorIndex@headerIndex');
+
+Route::get('/servicio', 'controladorServicios@listarServicios');
+Route::get('/servicio/agregar', 'controladorServicios@agregarServicios');
+
+Route::get('/login', 'controladorGeneral@login');
+
+Route::get('/faq', 'controladorGeneral@faq');
