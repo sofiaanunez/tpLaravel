@@ -16,7 +16,10 @@ Route::get('/', 'HomeController@index');
 Route::get('/index', 'controladorIndex@headerIndex');
 
 Route::get('/servicio', 'controladorServicios@listarServicios');
+
 Route::get('/servicio/agregar', 'controladorServicios@agregarServicios');
+
+Route::post('/servicio/agregar', 'controladorServicios@validarServicios');
 
 Route::get('/login', 'controladorGeneral@login');
 
