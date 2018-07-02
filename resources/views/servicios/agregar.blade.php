@@ -29,16 +29,16 @@
         <label for="">Descripcion</label> <br><input type="text" name="descripcion" value="{{old('descripcion')}}">
     </div>
     <div class="col-md">
-      <label for="">E-mail del usuario</label><br> <input type="text" name="email" value="{{old('email')}}">
+      <label for="">ID del usuario</label><br> <input type="text" name="id_usuario" value="{{old('id_usuario')}}">
     </div>
     <div class="col-md">
-      <label for="">Fecha de inicio</label> <br><input type="date" name="finicio" value="{{old('finicio')}}">
+      <label for="">Fecha de inicio</label> <br><input type="date" name="fecha_inicio" value="{{old('finicio')}}">
     </div>
     <div class="col-md">
-      <label for="">Fecha de finalizacion</label> <br> <input type="date" name="ffinal" value="{{old('ffinal')}}">
+      <label for="">Fecha de finalizacion</label> <br> <input type="date" name="fecha_fin" value="{{old('ffinal')}}">
     </div>
     <div class="col-md">
-      <label for="">Precio</label><br> <input type="number" name="precio" value="{{old('precio')}}">
+      <label for="">Precio</label><br> <input type="number" name="monto" value="{{old('monto')}}">
     </div>
   </div><br>
       <button type="submit" name="button"> Agregar Servicio</button>

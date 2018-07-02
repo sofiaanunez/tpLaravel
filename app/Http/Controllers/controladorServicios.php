@@ -25,30 +25,34 @@ class controladorServicios extends Controller
     public function validarServicios(Request $request){
 
       $validacion = [
+
         'rubro' => 'required|alpha',
+        'id_usuario' => 'required',
         'descripcion' => 'required',
-        'email' => 'required|email',
-        'finicio' => 'required',
-        'ffinal' => 'required',
-        'precio' => 'required|integer',
+        // 'email' => 'required|email',
+        'monto' => 'required|integer',
+        'fecha_inicio' => 'required',
+        'fecha_fin' => 'required',
+
       ];
 
       $mensajes = [
         'rubro.required' => 'Ingrese rubro',
         'rubro.alpha' => 'Ingrese un formato válido de rubro',
         'descripcion.required' => 'Ingrese descripción',
-        'email.required' => 'Ingrese su correo electrónico',
-        'email.email' => 'Ingrese un formato válido de correo electrónico',
-        'finicio.required' => 'Ingrese fecha de inicio',
-        'ffinal.required' => 'Ingrese fecha de finalización',
-        'precio.required' => 'Ingrese un precio',
-        'precio.integer' => 'Ingrese un formato de precio válido',
+        // 'email.required' => 'Ingrese su correo electrónico',
+        // 'email.email' => 'Ingrese un formato válido de correo electrónico',
+        'fecha_inicio.required' => 'Ingrese fecha de inicio',
+        'fecha_fin.required' => 'Ingrese fecha de finalización',
+        'monto.required' => 'Ingrese un precio',
+        'monto.integer' => 'Ingrese un formato de precio válido',
       ];
 
       $this->validate($request,$validacion,$mensajes);
 
-       $servicio = Servicio::create(
-       $request->except(['_token'])
+       $servicio = Servicios::create(
+       $request->except(['_token', 'button'])
+       // $request->only('rubro', 'descripcion', 'id_usuario', 'fecha_inicio', 'fecha_fin', 'monto')
     );
 
     echo "Se agregó tu servicio";
