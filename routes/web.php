@@ -18,8 +18,10 @@ Route::get('/index', 'controladorIndex@headerIndex');
 Route::get('/servicio', 'controladorServicios@listarServicios');
 
 Route::get('/servicio/agregar', 'controladorServicios@agregarServicios');
-
 Route::post('/servicio/agregar', 'controladorServicios@validarServicios');
+
+Route::get('/servicio/editar/{id}', 'controladorServicios@editarServicios');
+Route::post('/servicio/editar/{id}', 'controladorServicios@editarServicios');
 
 Route::get('/login', 'controladorGeneral@login');
 

@@ -22,6 +22,14 @@ class controladorServicios extends Controller
 
     }
 
+     public function editarServicios($id){
+
+       $servicio = Servicios::find($id);
+
+      return view('servicios.editar')->with('servicios', $servicio);
+
+      }
+
     public function validarServicios(Request $request){
 
       $validacion = [
@@ -49,9 +57,8 @@ class controladorServicios extends Controller
       ];
 
       $this->validate($request,$validacion,$mensajes);
-
        $servicio = Servicios::create(
-       $request->except(['_token', 'button'])
+         $request->except(['_token', 'button'])
        // $request->only('rubro', 'descripcion', 'id_usuario', 'fecha_inicio', 'fecha_fin', 'monto')
     );
 

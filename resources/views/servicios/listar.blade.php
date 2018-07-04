@@ -8,7 +8,7 @@
 
   <ul>
   @foreach ($servicios as $servicio)
-    <li>{{$servicio->descripcion}}</li>
+    <li><a href="/servicio/editar/{{$servicio->id}}">{{$servicio->rubro}}</a></li>
   @endforeach
     </ul>
 
