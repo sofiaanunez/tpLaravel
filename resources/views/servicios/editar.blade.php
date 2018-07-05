@@ -1,7 +1,7 @@
 @extends('plantilla-final.plantillaGeneral')
 
 @section('contenido')
-  <form class="" action="/servicio/editar" method="post"><br>
+  <form class="" action="/servicio/editar/{{$servicios->id}}" method="post"><br>
     <div class="container">
       {{ csrf_field() }}
   <div class="row">

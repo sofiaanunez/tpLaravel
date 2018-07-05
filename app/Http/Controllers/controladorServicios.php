@@ -22,13 +22,32 @@ class controladorServicios extends Controller
 
     }
 
-     public function editarServicios($id){
+     public function editarServicios($id, Request $request){
 
-       $servicio = Servicios::find($id);
+       $servicios = Servicios::find($id);
 
-      return view('servicios.editar')->with('servicios', $servicio);
+      return view('servicios.editar')->with('servicios', $servicios);
 
       }
+
+
+       public function actualizarServicios($id, Request $request){
+
+         $servicios = Servicios::find($id);
+
+         $servicios->rubro = $request->input('rubro');
+         $servicios->descripcion = $request->input('descripcion');
+         $servicios->id_usuario = $request->input('id_usuario');
+         $servicios->monto = $request->input('monto');
+         $servicios->fecha_inicio = $request->input('fecha_inicio');
+         $servicios->fecha_fin = $request->input('fecha_fin');
+
+         $servicios->save();
+
+        return view('servicios.editar')->with('servicios', $servicios);
+
+        }
+
 
     public function validarServicios(Request $request){
 
