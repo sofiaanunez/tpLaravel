@@ -11,9 +11,9 @@
 |
 */
 
-Route::get('/', 'HomeController@index');
 
-Route::get('/index', 'controladorIndex@headerIndex');
+
+Route::get('/', 'controladorIndex@headerIndex');
 
 Route::get('/servicio', 'controladorServicios@listarServicios');
 
@@ -26,3 +26,5 @@ Route::post('/servicio/editar/{id}', 'controladorServicios@actualizarServicios')
 Route::get('/login', 'controladorGeneral@login');
 
 Route::get('/faq', 'controladorGeneral@faq');
+
+Auth::routes();

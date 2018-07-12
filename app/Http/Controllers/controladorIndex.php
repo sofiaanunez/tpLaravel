@@ -7,6 +7,6 @@ use Illuminate\Http\Request;
 class controladorIndex extends Controller
 {
     public function headerIndex(){
-      return view('plantillaIndex.headerIndex');
+      return view('index');
     }
 }
