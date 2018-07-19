@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -165,7 +166,7 @@
 
         <div class="divisor"></div>
 
-        @include('plantillaIndex.footerIndex')
+            @include('plantilla-final.footer')
 
   </body>
 </html>
