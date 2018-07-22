@@ -21,9 +21,9 @@
            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     @include('plantillaIndex.headerIndex')
 
-    <section class="hero">
+    <!-- <section class="hero">
       <div class="opacidad" style=""> </div>
-  		<div class="background-image" style=""> </div>
+  		<div class="background-image" style=""><img src="..\PrimerRep\ecommerce-banner.jpg" alt=""> </div>
       <h1>eCommerce</h1>
       <br>
   		<h3>Todo lo que buscas ¡En un solo lugar!</h3>
@@ -31,140 +31,117 @@
         <input type="buscador" placeholder="¡Encontrá lo que necesitas!">
         <a href="#" class="btn">Buscar</a>
       </form>
-  	</section>
+  	</section> -->
+
+    <div class="jumbotron jumbotron-fluid">
+      <div class="container">
+        <h1>eCommerce</h1>
+        <br>
+    		<h3>Todo lo que buscas ¡En un solo lugar!</h3>
+        <form>
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="Encontra lo que buscas..." aria-label="Recipient's username" aria-describedby="basic-addon2">
+            <div class="input-group-append">
+              <button type="button" class="btn btn-primary">Buscar</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
 
 
     <section class="opciones">
 
       <h3>¿Qué estás buscando?</h4> <br>
-      <hr><br>
-      <div class="contenedor">
-      <ul class="iconos">
-        <li> <a href="#"><i class="fas fa-suitcase fa-3x"></i></li></a>
-        <li> <a href="#"> <i class="fas fa-building fa-3x"></i></li></a>
-        <li> <a href="#"> <i class="fas fa-birthday-cake fa-3x"></i></li></a>
-        <li> <a href="#"><i class="fas fa-keyboard fa-3x"></i></li></a>
-        <li> <a href="#"><i class="fas fa-car fa-3x"></i></li></a>
-      </ul>
-      <br>
-      <ul class="rubros">
-        <li> Servicios Profesionales </li>
-        <li> Construcción y afines</li>
-        <li> Fiestas y Animaciones</li>
-        <li> Computación</li>
-        <li> Rodados</li>
-      </ul>
-      </div>
-      <br>
-    </section>
+
+      <style>
+
+          /* Remove the jumbotron's default bottom margin */
+           .jumbotron {
+            margin-bottom: 0;
+          }
 
 
-    <div class="divisor"></div>
+        </style>
+      </head>
+      <body>
 
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-4">
+            <div class="panel panel-primary">
+              <div class="panel-heading">BLACK FRIDAY DEAL</div>
+              <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
+              <div class="panel-footer">Buy 50 mobiles and get a gift card</div>
+            </div>
 
-  <section class="opc-sec">
-      <h3>¡Ofertas del día!</h3>
+          </div>
+          <div class="col-sm-4">
+            <div class="panel panel-danger">
+              <div class="panel-heading">BLACK FRIDAY DEAL</div>
+              <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
+              <div class="panel-footer">Buy 50 mobiles and get a gift card</div>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="panel panel-success">
+              <div class="panel-heading">BLACK FRIDAY DEAL</div>
+              <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
+              <div class="panel-footer">Buy 50 mobiles and get a gift card</div>
+            </div>
+          </div>
+        </div>
+      </div><br>
 
-      <br><hr><br>
-      <section class="flex">
-
-      <div class="detalle">
-        <article class="cont-sec">
-          <a href="#"><img src="Images/Generales/oferta-obra.jpg" alt="10" width="200"></a>
-        </article>
-
-          <h4>Descuento en obras </h4>
-            <br>
-      </div>
-
-
-      <div class="detalle">
-        <article class="cont-sec">
-          <a href="#"><img  src="Images/Generales/fiestas.jpg" alt="10" width="200"></a>
-        </article>
-          <h4>¡Ahorra en tus festejos!</h4>
-            <br>
-      </div>
-
-
-      <div class="detalle">
-        <article class="cont-sec">
-          <a href="#"><img  src="Images/Generales/pc.jpg" alt="10" width="200"></a>
-        </article>
-          <h4>Arregla tu compu ¡YA!</h4>
-            <br>
-      </div>
-      </section>
-  </section>
-
-
-    <div class="divisor"></div>
-
-
-    <section class="opc-sec">
-        <h3>¡Ofertas del día!</h3>
-        <br><hr><br>
-        <section class="flex">
-        <div class="detalle">
-          <article class="cont-sec">
-            <a href="#"><img src="Images/Generales/oferta-obra.jpg" alt="10" width="200"></a>
-          </article>
-            <h4>Descuento en obras </h4>
-              <br>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-4">
+            <div class="panel panel-primary">
+              <div class="panel-heading">BLACK FRIDAY DEAL</div>
+              <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
+              <div class="panel-footer">Buy 50 mobiles and get a gift card</div>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="panel panel-primary">
+              <div class="panel-heading">BLACK FRIDAY DEAL</div>
+              <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
+              <div class="panel-footer">Buy 50 mobiles and get a gift card</div>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="panel panel-primary">
+              <div class="panel-heading">BLACK FRIDAY DEAL</div>
+              <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
+              <div class="panel-footer">Buy 50 mobiles and get a gift card</div>
+            </div>
+          </div>
         </div>
 
-        <div class="detalle">
-          <article class="cont-sec">
-            <a href="#"><img  src="Images/Generales/fiestas.jpg" alt="10" width="200"></a>
-          </article>
-            <h4>¡Ahorra en tus festejos!</h4>
-              <br>
-        </div>
-
-        <div class="detalle">
-          <article class="cont-sec">
-            <a href="#"><img  src="Images/Generales/pc.jpg" alt="10" width="200"></a>
-          </article>
-            <h4>Arregla tu compu ¡YA!</h4>
-              <br>
-        </div>
-      </section>
-    </section>
-
-
-      <div class="divisor"></div>
-
-
-      <section class="opc-sec">
-          <h3>¡Ofertas del día!</h3>
-          <br><hr><br>
-          <section class="flex">
-          <div class="detalle">
-            <article class="cont-sec">
-              <a href="#"><img src="Images/Generales/oferta-obra.jpg" alt="10" width="200"></a>
-            </article>
-
-              <h4>Descuento en obras </h4>
-                <br>
-          </div>
-          <div class="detalle">
-            <article class="cont-sec">
-              <a href="#"><img  src="Images/Generales/fiestas.jpg" alt="10" width="200"></a>
-            </article>
-              <h4>¡Ahorra en tus festejos!</h4>
-                <br>
-          </div>
-          <div class="detalle">
-            <article class="cont-sec">
-              <a href="#"><img  src="Images/Generales/pc.jpg" alt="10" width="200"></a>
-            </article>
-              <h4>Arregla tu compu ¡YA!</h4>
-                <br>
-          </div>
-        </section>
-      </section>
-
-        <div class="divisor"></div>
+      </div><br><br>
+      <div class="row">
+        <div class="col"></div>
+        <nav aria-label="Page navigation example">
+        <ul class="pagination">
+        <li class="page-item">
+        <a class="page-link" href="#" aria-label="Previous">
+          <span aria-hidden="true">&laquo;</span>
+          <span class="sr-only">Previous</span>
+        </a>
+        </li>
+        <li class="page-item"><a class="page-link" href="#">1</a></li>
+        <li class="page-item"><a class="page-link" href="#">2</a></li>
+        <li class="page-item"><a class="page-link" href="#">3</a></li>
+        <li class="page-item">
+        <a class="page-link" href="#" aria-label="Next">
+          <span aria-hidden="true">&raquo;</span>
+          <span class="sr-only">Next</span>
+        </a>
+        </li>
+        </ul>
+        </nav>
+        <div class="col"></div>
+      </div>
 
             @include('plantilla-final.footer')
 
