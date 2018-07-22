@@ -46,27 +46,40 @@ class RegisterController extends Controller
      * @param  array  $data
      * @return \Illuminate\Contracts\Validation\Validator
      */
-    protected function validator(array $data)
-    {
-        return Validator::make($data, [
-            'name' => 'required|string|max:255',
-            'email' => 'required|string|email|max:255|unique:users',
-            'password' => 'required|string|min:6|confirmed',
-        ]);
-    }
+     protected function validator(array $data)
+     {
+         return Validator::make($data, [
+             'nombre' => 'required|alpha|max:255',
+             'apellido' => 'required|alpha|max:255',
+             'fecha' => 'required|date',
+             'email' => 'required|string|email|max:255|unique:users',
+             'password' => 'required|string|min:6|confirmed',
+             'profesion' => 'required|alpha|max:255',
+             'pais' => 'required',
+             'provincia' => 'required',
+             'ciudad' => 'required',
+         ]);
+     }
 
-    /**
-     * Create a new user instance after a valid registration.
-     *
-     * @param  array  $data
-     * @return \App\User
-     */
-    protected function create(array $data)
-    {
-        return User::create([
-            'name' => $data['name'],
-            'email' => $data['email'],
-            'password' => Hash::make($data['password']),
-        ]);
-    }
-}
+     /**
+      * Create a new user instance after a valid registration.
+      *
+      * @param  array  $data
+      * @return \App\User
+      */
+     protected function create(array $data)
+     {
+         return User::create([
+           'nombre' => $data['nombre'],
+           'apellido' => $data['apellido'],
+           'fecha' => $data['fecha'],
+           'email' => $data['email'],
+           'password' => Hash::make($data['password']),
+           'profesion' => $data['profesion'],
+           'genero' => $data['genero'],
+           'pais' => $data['pais'],
+           'provincia' => $data['provincia'],
+           'ciudad' => $data['ciudad'],
+         ]);
+     }
+ }
