@@ -6,6 +6,13 @@ use Illuminate\Database\Eloquent\Model;
 
 class Store extends Model
 {
+  public function store(Request $request)
+{
+    $usuario = new User;
+    $usuario->create($request->all());
+    return redirect('login');
+
+}
 
   // public function store(Request $request){
   //   $servicio = new Servicios([
