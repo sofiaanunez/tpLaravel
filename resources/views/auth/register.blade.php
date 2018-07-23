@@ -1,29 +1,59 @@
-@extends('layouts.app')
+@extends('plantilla-final.plantillaGeneral')
 
-@section('content')
+@section('contenido')
+<br>
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Register') }}</div>
+                <div class="card-header">{{ __('Datos Personales') }}</div>
 
                 <div class="card-body">
-                    <form method="POST" action="{{ route('register') }}" aria-label="{{ __('Register') }}">
+                    <form method="POST" action="{{ route('register') }}" aria-label="{{ __('Register') }}"  files="true" enctype="multipart/form-data">
                         @csrf
 
                         <div class="form-group row">
-                            <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
+                            <label for="nombre" class="col-md-4 col-form-label text-md-right">{{ __('Nombre') }}</label>
 
                             <div class="col-md-6">
-                                <input id="name" type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{ old('name') }}" required autofocus>
+                                <input id="nombre" type="text" class="form-control{{ $errors->has('nombre') ? ' is-invalid' : '' }}" name="nombre" value="{{ old('nombre') }}" required autofocus>
 
-                                @if ($errors->has('name'))
+                                @if ($errors->has('nombre'))
                                     <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('name') }}</strong>
+                                        <strong>{{ $errors->first('nombre') }}</strong>
                                     </span>
                                 @endif
                             </div>
                         </div>
+
+                        <div class="form-group row">
+                            <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Apellido') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="apellido" type="text" class="form-control{{ $errors->has('apellido') ? ' is-invalid' : '' }}" name="apellido" value="{{ old('apellido') }}" required autofocus>
+
+                                @if ($errors->has('apellido'))
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('apellido') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="fecha" class="col-md-4 col-form-label text-md-right">{{ __('Fecha') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="fecha" type="date" class="form-control{{ $errors->has('fecha') ? ' is-invalid' : '' }}" name="fecha" value="{{ old('fecha') }}" required autofocus>
+
+                                @if ($errors->has('fecha'))
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('fecha') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
 
                         <div class="form-group row">
                             <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
@@ -54,24 +84,112 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Confirm Password') }}</label>
+                            <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Confirmar Password') }}</label>
 
                             <div class="col-md-6">
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
                             </div>
                         </div>
 
-                        <div class="form-group row mb-0">
-                            <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
-                                    {{ __('Register') }}
-                                </button>
+
+                        <div class="form-group row">
+                            <label for="profesion" class="col-md-4 col-form-label text-md-right">{{ __('Profesion') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="profesion" type="text" class="form-control{{ $errors->has('profesion') ? ' is-invalid' : '' }}" name="profesion" value="{{ old('profesion') }}" required autofocus>
+
+                                @if ($errors->has('profesion'))
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('profesion') }}</strong>
+                                    </span>
+                                @endif
                             </div>
                         </div>
+                      </div>
+                        <div class="form-group row">
+                            <label for="genero" class="col-md-4 col-form-label text-md-right">{{ __('Genero') }}</label>
+
+                            <div class="col-md-6">
+
+                                <input id="genero" type="radio" class="" name="genero" value="{{ old('genero') }}" autofocus> <label for="">Masculino</label> <br>
+                                <input id="genero" type="radio" class="" name="genero" value="{{ old('genero') }}" autofocus> <label for="">Femenino</label><br>
+                                <input id="genero" type="radio" class="" name="genero" value="{{ old('genero') }}" autofocus> <label for="">Otros</label> <br>
+
+
+                            </div>
+                        </div>
+
+
+                          <label for="pais" class="col-md-4 col-form-label text-md-left">{{ __('Seleccione un Pais') }}</label> <select class="form-control" id="sel1" name="pais" value ="{{ old('pais') }}" required autofocus>
+                            <option></option>
+                            <option>Argentina</option>
+                            <option>Brasil</option>
+                            <option>Chile</option>
+                            <option>Colombia</option>
+                            <option>Paraguay</option>
+                            <option>Uruguay</option>
+
+                          </select>
+
+                          @if ($errors->has('pais'))
+                              <span class="invalid-feedback" role="alert">
+                                  <strong>{{ $errors->first('pais') }}</strong>
+                              </span>
+                          @endif
+
+                          <label for="provincia" class="col-md-4 col-form-label text-md-left">{{ __('Seleccione una Provincia') }}</label> <select class="form-control" id="sel1" name="provincia" value ="{{ old('provincia') }}" required autofocus>
+                              <option></option>
+                              <option>Buenos Aires</option>
+                              <option>Santa Fe</option>
+                              <option>Catamarca</option>
+                              <option>Corrientes</option>
+                              <option>Entre Rios</option>
+                              <option>Santiago del Estero</option>
+                              <option>Santa Cruz</option>
+                          </select>
+                            @if ($errors->has('provincia'))
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $errors->first('provincia') }}</strong>
+                                </span>
+                            @endif
+
+                            <label for="ciudad" class="col-md-4 col-form-label text-md-left">{{ __('Seleccione una Ciudad') }}</label> <select class="form-control" id="sel1" name="ciudad" value ="{{ old('ciudad') }}" required autofocus>
+                              <option></option>
+                              <option>Capital Federal</option>
+                              <option>Gran Buenos Aires</option>
+                              <option>Moron</option>
+                              <option>Haedo</option>
+                              <option>Gregorio de Laferrere</option>
+                              <option>San Justo</option>
+                              <option>Ciudad Evita</option>
+                            </select>
+                              @if ($errors->has('ciudad'))
+                                  <span class="invalid-feedback" role="alert">
+                                      <strong>{{ $errors->first('ciudad') }}</strong>
+                                  </span>
+                              @endif
+                              <br>
+
+                                <div class="form-group">
+                                    <label>File input</label>
+                                    <input type="file" name="imagen" >
+                                </div>
+
+                            </div>
+                            <br>
+
+                        <div class="form-group row mb-0">
+                            <div class="col-md-6 offset-md-4-right">
+                                <button type="submit" class="btn btn-primary">
+                                    {{ __('Registrar') }}
+                                </button><br>
+                            </div>
+                        </div>
+
                     </form>
                 </div>
             </div>
-        </div>
-    </div>
-</div>
+          </div>
+
+<br>
 @endsection
